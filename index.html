@@ -16,11 +16,11 @@
     <main class="flex mt-16 gap-6 flex-col w-96 items-center bg-neutro rounded-lg p-14">
         <img src="/img//bag.png" alt="sacola de compras">
         <form class="flex flex-col items-center gap-2">
-            <input type="text" placeholder="Digite um item que deseja adicionar" class="block py-3 px-4 rounded-3xl border-2 border-solid w-80 placeholder:font-montserrat placeholder:text-sm">
-            <button class="text-center py-3 px-4 rounded-3xl bg-primaria text-neutro font-fonteTexto text-sm leading-6">Salvar item</button>
+            <input id="input-item" type="text" placeholder="Digite um item que deseja adicionar" class="block py-3 px-4 rounded-3xl border-2 border-solid w-80 placeholder:font-montserrat placeholder:text-sm">
+            <button id="adicionar-item" class="text-center py-3 px-4 rounded-3xl bg-primaria text-neutro font-fonteTexto text-sm leading-6">Salvar item</button>
         </form>
     
-       <ul class="list-none w-full">
+       <ul class="list-none w-full" id="lista-de-compras">
             <h2 class="text-primaria font-fonteTitulo text-xl text-left">Lista de compras</h2>
             <hr class="w-full mb-6 border-b-2 border-dotted border-primaria"/>
             <li>
@@ -35,15 +35,15 @@
                         </div>
                     </div>
                     <div>
-                        <button><img src="/img/delete.svg" alt="botão para deletar"></button>
-                        <button><img src="/img/edit.svg" alt="botão para editar"></button>
+                        <button><img src="/img/delete.svg" alt="Botão para deletar"></button>
+                        <button><img src="/img/edit.svg" alt="Botão para editar"></button>
                     </div>
                 </div>
                 <p class="font-fonteTexto leading-4 text-xs peer-checked:text-decoration-line-through peer-checked:text-gray-500">Segunda-feira (31/10/2022) às 08:30</p>
             </li>
         </ul>
-
     </main>
+    <script src="script.js"></script>
 </body>
 
 </html>
