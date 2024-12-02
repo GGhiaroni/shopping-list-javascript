@@ -12,29 +12,29 @@
     <link rel="stylesheet" href="/dist/styles.css" />
 </head>
 
-<body>
-    <main>
+<body class="h-screen flex flex-col items-center bg-corBackgroundDois">
+    <main class="flex mt-16 gap-6 flex-col w-96 items-center bg-neutro rounded-lg p-14">
         <img src="/img//bag.png" alt="sacola de compras">
-        <form>
-            <input type="text" placeholder="Digite um item que deseja adicionar">
-            <button>Salvar item</button>
+        <form class="flex flex-col items-center gap-2">
+            <input type="text" placeholder="Digite um item que deseja adicionar" class="block py-3 px-4 rounded-3xl border-2 border-solid w-80 placeholder:font-montserrat placeholder:text-sm">
+            <button class="text-center py-3 px-4 rounded-3xl bg-primaria text-neutro font-fonteTexto text-sm leading-6">Salvar item</button>
         </form>
-        <h2 class="text-primaria font-fonteTitulo text-lg">Lista de compras</h2>
-        <hr>
-
-        <ul>
+    
+        <ul class="list-none w-full">
+            <h2 class="text-primaria font-fonteTitulo text-xl text-left">Lista de compras</h2>
+            <hr class="w-full mb-6 border-b-2 border-dotted border-primaria"/>
             <li>
-                <div>
-                    <div>
+                <div class="flex items-center justify-between">
+                    <div class="flex">
                         <input type="checkbox">
-                        <p>Banana prata</p>
+                        <p class="font-fonteTexto text-base font-normal leading-6 text-left">Banana prata</p>
                     </div>
                     <div>
                         <button><img src="/img/delete.svg" alt="botão para deletar"></button>
                         <button><img src="/img/edit.svg" alt="botão para editar"></button>
                     </div>
                 </div>
-                <p>Segunda-feira (31/10/2022) às 08:30</p>
+                <p class="font-fonteTexto leading-4 text-xs">Segunda-feira (31/10/2022) às 08:30</p>
             </li>
         </ul>
     </main>

@@ -1,5 +1,5 @@
 module.exports = {
-  content: ["./*.{html,js}"], // Define o caminho dos arquivos que utilizam Tailwind
+  content: ["./*.{html,js}"],
   theme: {
     extend: {
       colors: {
@@ -7,11 +7,13 @@ module.exports = {
         secundaria: "var(--cor-secundaria)",
         neutro: "var(--neutro)",
         preto: "var(--preto)",
-        degradeAzul: "var(--degrade-azul)"
+        corBackground: "var(--cor-background)",
+        corBackgroundDois: "var(--cor-background-dois)"
       },
       fontFamily: {
         fonteTitulo: "var(--fonte-titulo)",
-        fonteTexto: "var(--fonte-texto)"
+        fonteTexto: "var(--fonte-texto)",
+        montserrat: ['Montserrat', 'sans-serif'],
       }
     },
   },
