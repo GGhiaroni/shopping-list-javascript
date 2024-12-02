@@ -20,23 +20,29 @@
             <button class="text-center py-3 px-4 rounded-3xl bg-primaria text-neutro font-fonteTexto text-sm leading-6">Salvar item</button>
         </form>
     
-        <ul class="list-none w-full">
+       <ul class="list-none w-full">
             <h2 class="text-primaria font-fonteTitulo text-xl text-left">Lista de compras</h2>
             <hr class="w-full mb-6 border-b-2 border-dotted border-primaria"/>
             <li>
                 <div class="flex items-center justify-between">
                     <div class="flex">
-                        <input type="checkbox">
-                        <p class="font-fonteTexto text-base font-normal leading-6 text-left">Banana prata</p>
+                        <div class="flex items-center">
+                            <label for="checkbox-1" class="flex items-center">
+                                <input type="checkbox" id="checkbox-1" class="peer hidden">
+                                <div class="w-5 h-5 bg-neutro border-2 border-solid border-preto cursor-pointer rounded-md mr-2 peer-checked:bg-preto peer-checked:relative check-mark"></div>
+                                <p class="font-fonteTexto text-base font-normal leading-6 text-left peer-checked:line-through peer-checked:text-gray-500">Banana prata</p>
+                            </label>
+                        </div>
                     </div>
                     <div>
                         <button><img src="/img/delete.svg" alt="botão para deletar"></button>
                         <button><img src="/img/edit.svg" alt="botão para editar"></button>
                     </div>
                 </div>
-                <p class="font-fonteTexto leading-4 text-xs">Segunda-feira (31/10/2022) às 08:30</p>
+                <p class="font-fonteTexto leading-4 text-xs peer-checked:text-decoration-line-through peer-checked:text-gray-500">Segunda-feira (31/10/2022) às 08:30</p>
             </li>
         </ul>
+
     </main>
 </body>
 

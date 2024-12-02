@@ -22,3 +22,16 @@
 body {
     background-color: var(--degrade-azul);
 }
+
+.check-mark::after {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 6px;
+    border-left: 2px solid white;
+    border-bottom: 2px solid white;
+    transform: rotate(-45deg);
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
