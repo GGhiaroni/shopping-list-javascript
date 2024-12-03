@@ -18,7 +18,6 @@ function adicionarItem(e) {
     const containerItemLista = document.createElement('div');
     containerItemLista.classList.add('flex', 'items-center', 'justify-between', 'mt-4');
 
-    // Criar o label que conterá o checkbox e o texto
     const checkboxLabel = document.createElement('label');
     checkboxLabel.classList.add('flex', 'items-center', 'cursor-pointer', 'w-full', 'gap-2');
 
@@ -40,12 +39,10 @@ function adicionarItem(e) {
     );
     nomeDoItem.innerText = item.value;
 
-    // Montar o label
     checkboxLabel.appendChild(checkboxInput);
     checkboxLabel.appendChild(checkboxCustomizado);
     checkboxLabel.appendChild(nomeDoItem);
 
-    // Criar botões de ação
     const containerBotoes = document.createElement('div');
     containerBotoes.classList.add('flex', 'justify-center');
     const botaoRemover = document.createElement('button');
@@ -66,7 +63,6 @@ function adicionarItem(e) {
     containerBotoes.appendChild(botaoRemover);
     containerBotoes.appendChild(botaoEditar);
 
-    // Adicionar os elementos ao item da lista
     containerItemLista.appendChild(checkboxLabel);
     containerItemLista.appendChild(containerBotoes);
 
