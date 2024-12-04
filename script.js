@@ -18,7 +18,7 @@ function adicionarItem(e) {
     const itemDaLista = document.createElement('li');
 
     const containerItemLista = document.createElement('div');
-    containerItemLista.classList.add('flex', 'items-center', 'justify-between', 'mt-4');
+    containerItemLista.classList.add('flex', 'items-center', 'justify-between', 'mt-5');
 
     const checkboxLabel = document.createElement('label');
     checkboxLabel.classList.add('flex', 'items-center', 'cursor-pointer', 'w-full', 'gap-2');
@@ -85,8 +85,12 @@ function adicionarItem(e) {
     containerItemLista.appendChild(checkboxLabel);
     containerItemLista.appendChild(containerBotoes);
 
-    itemDaLista.appendChild(containerItemLista);
+    const itemData = document.createElement('p');
+    itemData.innerText = `${new Date().toLocaleDateString("pt-BR", { weekday: "long" })} (${new Date().toLocaleDateString()}) às ${new Date().toLocaleTimeString("pt-BR", {hour: "numeric", minute: "numeric"})}`;
+    itemData.classList.add('font-fonteTexto', 'leading-4', 'text-xs');
 
+    itemDaLista.appendChild(containerItemLista);
+    itemDaLista.appendChild(itemData);
     listaDeCompras.appendChild(itemDaLista);
 
     item.value = '';
