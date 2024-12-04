@@ -3,6 +3,8 @@ const botaoSalvarItem = document.getElementById('adicionar-item');
 const listaDeCompras = document.getElementById('lista-de-compras');
 let contador = 0;
 
+const listaItensComprados = document.getElementById('lista-itens-comprados');
+
 botaoSalvarItem.addEventListener('click', adicionarItem);
 
 function adicionarItem(e) {
@@ -23,14 +25,26 @@ function adicionarItem(e) {
 
     const checkboxInput = document.createElement('input');
     checkboxInput.type = 'checkbox';
-    checkboxInput.classList.add('peer', 'hidden');
+    checkboxInput.classList.add('peer', 'hidden', 'input-checkbox');
     checkboxInput.id = 'checkbox-' + contador++;
 
     const checkboxCustomizado = document.createElement('div');
     checkboxCustomizado.classList.add(
         'w-5', 'h-5', 'bg-neutro', 'border-2', 'border-solid', 'border-preto',
-        'cursor-pointer', 'rounded-md', 'peer-checked:bg-preto', 'check-mark', 'relative'
+        'cursor-pointer', 'rounded-md', 'checkbox-customizado'
     );
+
+    checkboxLabel.addEventListener("click", function (e) {
+        const checkboxInput = e.currentTarget.querySelector(".input-checkbox");
+        const checkboxCustomizado = e.currentTarget.querySelector(".checkbox-customizado");
+
+        if (checkboxInput.checked)
+        {
+            checkboxCustomizado.classList.add('bg-preto', 'check-mark', 'relative'); 
+            console.log("pintou");
+            listaItensComprados.appendChild(itemDaLista);
+        }
+    });
 
     const nomeDoItem = document.createElement('p');
     nomeDoItem.classList.add(

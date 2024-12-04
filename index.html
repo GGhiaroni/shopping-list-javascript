@@ -28,8 +28,8 @@
                     <div class="flex">
                         <div class="flex items-center">
                             <label for="checkbox-1" class="flex items-center">
-                                <input type="checkbox" id="checkbox-1" class="peer hidden">
-                                <div class="w-5 h-5 bg-neutro border-2 border-solid border-preto cursor-pointer rounded-md mr-2 peer-checked:bg-preto peer-checked:relative check-mark"></div>
+                                <input type="checkbox" id="checkbox-1" class="peer hidden input-checkbox">
+                                <div class="w-5 h-5 bg-neutro border-2 border-solid border-preto cursor-pointer rounded-md mr-2 checkbox-customizado"></div>
                                 <p class="font-fonteTexto text-base font-normal leading-6 text-left peer-checked:line-through peer-checked:text-gray-500">Banana prata</p>
                             </label>
                         </div>
@@ -41,6 +41,11 @@
                 </div>
                 <p class="font-fonteTexto leading-4 text-xs peer-checked:text-decoration-line-through peer-checked:text-gray-500">Segunda-feira (31/10/2022) às 08:30</p>
             </li>
+        </ul>
+
+        <ul class="w-full list-none" id="lista-itens-comprados">
+            <h2 class="text-primaria font-fonteTitulo text-xl text-left">Comprados</h2>
+            <hr class="w-full mb-6 border-b-2 border-dotted border-primaria"/>
         </ul>
     </main>
     <script src="script.js"></script>
