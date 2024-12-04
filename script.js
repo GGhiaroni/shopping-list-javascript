@@ -41,9 +41,14 @@ function adicionarItem(e) {
         if (checkboxInput.checked)
         {
             checkboxCustomizado.classList.add('bg-preto', 'check-mark', 'relative'); 
-            console.log("pintou");
             listaItensComprados.appendChild(itemDaLista);
         }
+        else
+        {
+            checkboxCustomizado.classList.remove('bg-preto', 'check-mark', 'relative');
+            listaDeCompras.appendChild(itemDaLista);
+        }
+        
     });
 
     const nomeDoItem = document.createElement('p');
