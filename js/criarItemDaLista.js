@@ -1,4 +1,5 @@
 import { excluirItem } from "./excluirItem.js";
+import { verificarListaVazia } from "./verificarListaVazia.js";
 
 const listaDeCompras = document.getElementById('lista-de-compras');
 const listaItensComprados = document.getElementById('lista-itens-comprados');
@@ -39,6 +40,7 @@ export function criarItemDaLista(item)
             checkboxCustomizado.classList.remove('bg-preto', 'check-mark', 'relative');
             listaDeCompras.appendChild(itemDaLista);
         } 
+        verificarListaVazia(listaDeCompras);
     });
 
     const nomeDoItem = document.createElement('p');
