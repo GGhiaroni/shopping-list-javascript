@@ -1,3 +1,5 @@
+import { excluirItem } from "./excluirItem.js";
+
 const listaDeCompras = document.getElementById('lista-de-compras');
 const listaItensComprados = document.getElementById('lista-itens-comprados');
 let contador = 0;
@@ -36,8 +38,7 @@ export function criarItemDaLista(item)
         {
             checkboxCustomizado.classList.remove('bg-preto', 'check-mark', 'relative');
             listaDeCompras.appendChild(itemDaLista);
-        }
-        
+        } 
     });
 
     const nomeDoItem = document.createElement('p');
@@ -61,6 +62,10 @@ export function criarItemDaLista(item)
     imgRemover.src = 'img/delete.svg';
     imgRemover.alt = 'Botão para remover';
     botaoRemover.appendChild(imgRemover);
+
+    botaoRemover.addEventListener('click', () => {
+        excluirItem(itemDaLista);
+    });
 
     const imgEditar = document.createElement('img');
     imgEditar.classList.add('w-4', 'ml-1');
