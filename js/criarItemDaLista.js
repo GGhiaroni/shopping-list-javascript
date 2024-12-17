@@ -1,3 +1,4 @@
+import { editarItem } from "./editarItem.js";
 import { excluirItem } from "./excluirItem.js";
 import { verificarListaVazia } from "./verificarListaVazia.js";
 
@@ -48,6 +49,7 @@ export function criarItemDaLista(item)
         'font-fonteTexto', 'text-base', 'font-normal', 'leading-6', 
         'peer-checked:line-through', 'peer-checked:text-gray-500'
     );
+    nomeDoItem.id = "item-titulo";
     nomeDoItem.innerText = item;
 
     checkboxLabel.appendChild(checkboxInput);
@@ -75,6 +77,10 @@ export function criarItemDaLista(item)
     imgEditar.alt = 'Botão para editar';
     botaoEditar.appendChild(imgEditar);
 
+    botaoEditar.addEventListener('click', () => {
+        editarItem(itemDaLista);
+    });
+
     containerBotoes.appendChild(botaoRemover);
     containerBotoes.appendChild(botaoEditar);
 
@@ -82,6 +88,7 @@ export function criarItemDaLista(item)
     containerItemLista.appendChild(containerBotoes);
 
     const itemData = document.createElement('p');
+    itemData.id = "item-data";
     itemData.innerText = `${new Date().toLocaleDateString("pt-BR", { weekday: "long" })} (${new Date().toLocaleDateString()}) às ${new Date().toLocaleTimeString("pt-BR", {hour: "numeric", minute: "numeric"})}`;
     itemData.classList.add('font-fonteTexto', 'leading-4', 'text-xs');
 
